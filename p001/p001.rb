@@ -1,1 +1,1 @@
-puts (1..1000).select{|e| e%3 == 0 || e%5 == 0}.inject(:+)
+puts (1..999).select{|e| e%3 == 0 || e%5 == 0}.inject(:+)
