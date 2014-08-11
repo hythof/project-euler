@@ -10,11 +10,12 @@ end
 def main n
     Dir.mkdir "p#{n}"
     Dir.chdir "p#{n}" do
-        file "Makefile", "all:
-\trunghc p#{n}.hs
-\tgo run p#{n}.go
-\tg++ p#{n}.cpp && ./a.out && rm a.out
-\truby p#{n}.rb
+        file "Makefile", "time=/usr/bin/time -p
+all:
+\t$(time) runghc p#{n}.hs
+\t$(time) go run p#{n}.go
+\tg++ p#{n}.cpp && $(time) ./a.out && rm a.out
+\t$(time) ruby p#{n}.rb
 "
         file "p#{n}.hs", 'main = do
   print "no implement"'
