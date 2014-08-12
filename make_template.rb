@@ -13,9 +13,13 @@ def main n
         file "Makefile", "time=/usr/bin/time -p
 all:
 \t$(time) runghc p#{n}.hs
+echo "--"
 \t$(time) go run p#{n}.go
-\tg++ p#{n}.cpp && $(time) ./a.out && rm a.out
+echo "--"
+\tg++ -O3 p#{n}.cpp && $(time) ./a.out && rm a.out
+echo "--"
 \t$(time) ruby p#{n}.rb
+echo "--"
 "
         file "p#{n}.hs", 'main = do
   print "no implement"'
