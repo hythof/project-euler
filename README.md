@@ -1,6 +1,6 @@
 # Try Project Euler
-https://projecteuler.net/
-http://odz.sakura.ne.jp/projecteuler/
+en) https://projecteuler.net/
+ja) http://odz.sakura.ne.jp/projecteuler/
 
 ## Language
 - Haskell
